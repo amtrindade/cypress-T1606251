@@ -41,6 +41,3 @@ Este comando abrirá a interface gráfica do Cypress, onde você poderá rodar o
 
 Se você deseja contribuir com este projeto, sinta-se à vontade para enviar um pull request ou abrir uma issue para discutir mudanças.
 
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
