@@ -11,17 +11,17 @@ Este é um projeto de automação de testes utilizando o Cypress com Node.js. Pr
 Para clonar este repositório, execute o seguinte comando no terminal:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/amtrindade/cypress-T1606251.git
 ```
 
-Substitua `seu-usuario` e `seu-repositorio` pelo nome de usuário e nome do repositório do seu projeto.
+Substitua `amtrindade` e `cypress-T1606251` pelo nome de usuário e nome do repositório do seu projeto.
 
 ## Instalando o Projeto
 
 Após clonar o repositório, navegue até o diretório do projeto e instale as dependências utilizando o npm:
 
 ```bash
-cd seu-repositorio
+cd cypress-T1606251
 npm install
 ```
 
