@@ -35,6 +35,13 @@ Para executar os testes, utilize o seguinte comando:
 npx cypress open
 ```
 
+## Rodar os testes 
+
+```bash
+npm run cy:run
+```
+
+
 Este comando abrirá a interface gráfica do Cypress, onde você poderá rodar os testes e visualizar os resultados.
 
 ## Contribuindo
