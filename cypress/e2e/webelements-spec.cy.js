@@ -59,4 +59,22 @@ describe('Validando elementos web', () => {
         cy.get('input[type=checkbox]').uncheck('Check 2').should('not.be.checked')
         cy.get('input[type=checkbox]').uncheck( {multiple: true} ).should('not.be.checked')
     })
+
+    it('Deveria validar o select single', () => {
+        cy.get('select[name=dropdownlist]').select('Item 4').should('have.value', 'item4')
+        
+        //TODO: Explicar sobre o invoke
+        cy.get('select[name=dropdownlist]').select(0)
+            .invoke('val')
+            .should('eq', 'item1')
+
+        cy.get('select[name=dropdownlist] option').should('have.length', 10)
+        cy.get('select[name=dropdownlist] option').should('have.length.greaterThan', 9)
+        cy.get('select[name=dropdownlist] option').eq(0).should('have.value', 'item1')
+
+        //TODO: Validar quais os valores do select
+
+    })
+
+
 })
