@@ -76,5 +76,9 @@ describe('Validando elementos web', () => {
 
     })
 
+    it.only('Deveria validar o select multiple', () => {
+        cy.get('select[name=multiselectdropdown]').select(['Item 1', 'Item 4', 'Item 9'])
+        //TODO: then() val() invoke() para converter os arrays comparar   
+    })
 
 })
