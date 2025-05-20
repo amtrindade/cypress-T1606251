@@ -36,7 +36,7 @@ describe('Validando elementos web', () => {
 
     })
 
-    it.only('Deveria validar o radio group', () => {
+    it('Deveria validar o radio group', () => {
         cy.get('input[name=radioGroup1]')
             .should('have.length', 4)
         cy.get('input[name=radioGroup1]')
