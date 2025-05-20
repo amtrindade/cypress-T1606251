@@ -6,7 +6,7 @@ describe('Validando elementos web', () => {
    
     it('Validando o título da página', () => {       
         cy.title().should('contains', 'WebElements') 
-        cy.title().should('eq', 'WebElements Test Page Lab') 
+        cy.title().should('equal', 'WebElements Test Page Lab') 
     })
 
    it('Deveria escrever o nome e validar no textfield', () => {
@@ -49,5 +49,14 @@ describe('Validando elementos web', () => {
 
         cy.get('input[name=radioGroup1]').check().should('be.checked')
 
+    })
+
+    it('Deveria validar o checkbox', () => {
+        cy.get('input[type=checkbox]').first().check().should('be.checked')
+        cy.get('input[type=checkbox]').check('Check 2').should('be.checked')
+        cy.get('input[type=checkbox]').check(['Check 3', 'Check 4']).should('be.checked')
+
+        cy.get('input[type=checkbox]').uncheck('Check 2').should('not.be.checked')
+        cy.get('input[type=checkbox]').uncheck( {multiple: true} ).should('not.be.checked')
     })
 })
