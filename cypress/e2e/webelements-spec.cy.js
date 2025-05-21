@@ -81,4 +81,6 @@ describe('Validando elementos web', () => {
         //TODO: then() val() invoke() para converter os arrays comparar   
     })
 
+    
+
 })
