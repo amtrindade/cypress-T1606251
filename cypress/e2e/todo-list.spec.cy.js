@@ -17,6 +17,7 @@ describe('Todo List', () => {
 
         beforeEach(() => {
             cy.get('[data-test="new-todo"]').type(`${task}{enter}`)
+            
         })
 
         it ('Deveria marcar um todo como completo', () => {

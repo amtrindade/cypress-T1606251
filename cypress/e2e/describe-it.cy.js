@@ -1,7 +1,11 @@
 describe('Describe 1', () => {
 
     before(() => {
-        cy.log('Before all')
+        cy.log('Before all describe 1')
+    })
+
+    after(() => {
+        cy.log('After all describe 1')
     })
 
     beforeEach(() => {
@@ -42,6 +46,10 @@ describe('Describe 2', () => {
 
         it('Teste 7', () => {
             cy.log('Teste 7')
+        })
+
+        afterEach(() => {
+            cy.log('After each describe 3')
         })
     })
 })
