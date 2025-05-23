@@ -63,22 +63,39 @@ describe('Validando elementos web', () => {
     it('Deveria validar o select single', () => {
         cy.get('select[name=dropdownlist]').select('Item 4').should('have.value', 'item4')
         
-        //TODO: Explicar sobre o invoke
-        cy.get('select[name=dropdownlist]').select(0)
+        //Pegando o texto de um option
+        cy.get('select[name=dropdownlist]').select(0).find(':selected')
+            .invoke('text')
+            .should('eq', 'Item 1')
+
+        //Pegando o valor de um option
+        cy.get('select[name=dropdownlist]').select(1).find(':selected')
             .invoke('val')
-            .should('eq', 'item1')
+            .should('eq', 'item2')
 
         cy.get('select[name=dropdownlist] option').should('have.length', 10)
         cy.get('select[name=dropdownlist] option').should('have.length.greaterThan', 9)
         cy.get('select[name=dropdownlist] option').eq(0).should('have.value', 'item1')
+        
+        cy.get('select[name=dropdownlist] option').then($options => {
+            const values = []
+            $options.each(function() {
+                values.push(this.innerText)
+            })
 
-        //TODO: Validar quais os valores do select
+            expect(values).to.include.members(['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10'])
+        })
 
     })
 
-    it.only('Deveria validar o select multiple', () => {
+    it('Deveria validar o select multiple', () => {
         cy.get('select[name=multiselectdropdown]').select(['Item 1', 'Item 4', 'Item 9'])
-        //TODO: then() val() invoke() para converter os arrays comparar   
+        
+        cy.get('select[name=multiselectdropdown]').then($list => {
+            expect($list.val()).to.be.deep.equal(['item1', 'item4', 'item9'])
+            expect($list.val()).to.have.length(3)
+        })
+        
     })
 
     
