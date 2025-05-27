@@ -31,7 +31,11 @@ jspm_packages
 # dotenv environment variables file
 .env
 .env.test
+cypress.env.json
 
 # cypress
 cypress/screenshots
 cypress/videos
+
+# Report output
+reports

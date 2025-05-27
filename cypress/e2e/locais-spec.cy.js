@@ -11,8 +11,8 @@ describe('Trabalhando com Locais', () => {
     beforeEach(() => {       
         nameLocal = 'Local da turma de Cypress - ' + getRandomInt()
 
-        cy.visit('https://center.umov.me')
-        cy.login('trindade', 'aluno01', 'alterasenha' )
+        cy.visit(Cypress.env('url'))
+        cy.login(Cypress.env('environment'), Cypress.env('user'), Cypress.env('password'))
         cy.get(loc.MENU.MENU_LOCAIS, {timeout: 10000}).click()
 
     })
