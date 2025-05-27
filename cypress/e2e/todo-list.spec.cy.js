@@ -1,3 +1,5 @@
+import 'cypress-mochawesome-reporter/register';
+
 describe('Todo List', () => {
 
     const task = 'Buy bread'
@@ -33,7 +35,7 @@ describe('Todo List', () => {
                 .parent().find('.destroy').invoke('show').click()
 
             cy.get('.todo-list li')
-                .should('have.length', 2)
+                .should('have.length', 1)
                 .should('not.contain', `${task}`)
         })
 

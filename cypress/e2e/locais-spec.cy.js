@@ -1,4 +1,5 @@
 import loc from '../support/locators'
+import 'cypress-mochawesome-reporter/register';
 
 describe('Trabalhando com Locais', () => {
     const corporateName = 'Turma de Cypress'

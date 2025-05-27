@@ -1,3 +1,5 @@
+import 'cypress-mochawesome-reporter/register';
+
 describe('Trabahando com Asserts', () => {
     
     it('Trabalhando com Integer', () => {

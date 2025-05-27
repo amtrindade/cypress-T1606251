@@ -1,3 +1,5 @@
+import 'cypress-mochawesome-reporter/register';
+
 describe('Testes validação da home', () => {
   
   

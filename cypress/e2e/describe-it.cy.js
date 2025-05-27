@@ -1,3 +1,5 @@
+import 'cypress-mochawesome-reporter/register';
+
 describe('Describe 1', () => {
 
     before(() => {

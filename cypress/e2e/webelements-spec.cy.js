@@ -1,3 +1,5 @@
+import 'cypress-mochawesome-reporter/register';
+
 describe('Validando elementos web', () => {
 
     beforeEach(() => {
