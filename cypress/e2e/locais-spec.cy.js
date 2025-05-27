@@ -12,7 +12,7 @@ describe('Trabalhando com Locais', () => {
         nameLocal = 'Local da turma de Cypress - ' + getRandomInt()
 
         cy.visit('https://center.umov.me')
-        cy.login('trindade', 'aluno01', '123456' )
+        cy.login('trindade', 'aluno01', 'alterasenha' )
         cy.get(loc.MENU.MENU_LOCAIS, {timeout: 10000}).click()
 
     })
